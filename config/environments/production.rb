@@ -45,6 +45,15 @@ LanguageHypothesis::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
+    config.action_mailer.smtp_settings = {
+    :address              => "smtp.sendgrid.net",
+    :port                 => 587,
+    :domain               => 'learnemy.com',
+    :user_name            => 'Elisha',
+    :password             => 'thisislearnemy',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+  }
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
